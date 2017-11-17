@@ -18,7 +18,9 @@
 			Built with Kickoff - trykickoff.com
 		-->
 
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<link rel="stylesheet" href="/assets/dist/css/kickoff.css">
+
 
 		<!-- For mobile icons & social metatags etc, see http://trykickoff.com/learn/html.html#socialmeta -->
 
@@ -58,32 +60,102 @@
 								</div>
 								<div class="current-locale">
 									<a href="">UK</a>
-									<!-- <img src="./assets/src/scss/svg/down.svg" alt="down-arrow" /> -->
+									
 								</div>
 							</div>
 						</div>			
 					</div>
 
 					<div class="nav-primary">
-						<img src="" alt="">
-						<nav>
+
+						<!-- Hamburger menu for mobile -->
+						<button class="hamburger hamburger--slider" type="button">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+
+						<!-- Logo -->
+						<div class="logo-container">
+							<img class="logo" src="./assets/src/scss/svg/logo.svg" alt="Site logo" />
+						</div>
+							
+						<!-- Main Navigation -->
+						<nav class="main-nav-container">
 							<ul class="main-nav">
-								<li class="main-nav-item"><a class="" href=""></a></li>
-								<li class="main-nav-item"><a class="" href=""></a></li>
-								<li class="main-nav-item"><a class="" href=""></a></li>
-								<li class="main-nav-item"><a class="" href=""></a></li>
+								<li class="main-nav-item"><a class="" href="#">Home</a></li>
+								<li class="main-nav-item has-dropdown"><a class="collections" href="#">Collections</a>
+									<div class="main-nav-dropdown">
+										<div class="g g--gutter">
+											<div class="g-col g-span3">
+												<ul>
+													<li>Collections 1</li>
+													<li>Collections 2</li>
+													<li>Collections 3</li>
+													<li>Collections 4</li>
+												</ul>
+											</div>
+											<div class="g-col g-span3">
+												<ul>
+													<li>Collections 1</li>
+													<li>Collections 2</li>
+													<li>Collections 3</li>
+													<li>Collections 4</li>
+												</ul>
+											</div>
+											<div class="g-col g-span3">
+												<img src="http://via.placeholder.com/200x150" alt="Placeholder Image 1">
+											</div>
+											<div class="g-col g-span3">
+												<img src="http://via.placeholder.com/200x150" alt="Placeholder Image 2">
+											</div>
+																								
+										</div>
+									</div>
+								</li>
+								<li class="main-nav-item"><a class="" href="#">Lookbook</a></li>
+								<li class="main-nav-item"><a class="" href="#">About</a></li>
 							</ul>
 						</nav>
-						<ul class="">
-							<li></li>
+
+						<!-- Interactive Icons -->
+						<ul class="nav-icons">
+							<li class="nav-icon-item nav-icon-item-search"><a href="#">search</a></li>
+							<li class="nav-icon-item nav-icon-item-profile"><a href="#">profile</a></li>
+							<li class="nav-icon-item nav-icon-item-favourite"><a href="#">favourite</a></li>
+							<li class="nav-icon-item nav-icon-item-basket"><a href="#">basket</a></li>
 						</ul>
 					</div>
 				</header>
 			</section>
 
-		</div><!-- Close #main -->
+			<section class="banner">
 
+					<div class="main-carousel">
+						<div class="carousel-cell cell-1"></div>
+						<div class="carousel-cell cell-2"></div>
+						<div class="carousel-cell cell-3"></div>
+					</div>
+
+				<!-- Off Canvas Mobile Menu -->
+				<div class="mobile-menu-container">
+					<nav>
+						<ul class="mobile-menu">
+							<li class="mobile-menu-item"><a class="" href="#">Home</a></li>
+							<li class="mobile-menu-item"><a class="" href="#">Collections</a></li>
+							<li class="mobile-menu-item"><a class="" href="#">Lookbook</a></li>
+							<li class="mobile-menu-item"><a class="" href="#">About</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+			
+
+		</div><!-- Close #main -->
+		
 		<script src="/assets/dist/js/kickoff.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		
 
 	</body>
 </html>

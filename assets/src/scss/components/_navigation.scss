@@ -1,0 +1,118 @@
+// Main Nav Style for Tablets / Desktop
+.nav-primary {
+    position: relative;
+    height: 80px;
+    padding: 20px 0;
+
+    @include media('>mid') {
+        height: 120px;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 15px;
+        width: 55px;
+        margin: 0 auto 0 auto;
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+
+        @include media('>mid') {
+            top: $baseline;
+            left: $baseline;
+            width: 80px;
+            margin: 0;
+
+        }
+    }
+
+    .main-nav-container {
+        display: none;
+
+        @include media('>mid') {
+            display: table;
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .main-nav {
+        @include media('>mid') {
+            display: table-cell;
+            vertical-align: middle;
+            position: relative;
+            list-style: none;
+            height: 80px;
+            margin: 0;
+        }
+    }
+
+    .main-nav-item {
+        @include media('>mid') {
+            display: inline-block;
+        }
+
+        a {
+            @include media('>mid') {
+                padding: 0 10px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: $font-size-large;
+            }
+
+            @include media('>wide') {
+                padding: 0 $baseline;
+            }
+        }
+    }
+}
+
+// Interactive Icons
+.nav-icons {
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    right: $baseline;
+    top: $baseline;
+
+    @include media('>mid') {
+        top: $baseline * 2;
+    }
+
+    .nav-icon-item {
+        float: left;
+        text-indent: -9999px;
+        margin: 0 5px;
+        height: 24px;
+        width: 24px;
+        background-repeat: no-repeat;
+    }
+
+    .nav-icon-item-search,
+    .nav-icon-item-profile,
+    .nav-icon-item-favourite {
+        display: none;
+
+        @include media('>mid') {
+            display: block;
+        }  
+    }
+
+    .nav-icon-item-search {
+        background-image: url('../../src/scss/svg/search.svg');  
+    }
+
+    .nav-icon-item-profile {
+        background-image: url('../../src/scss/svg/profile.svg');          
+    }
+
+    .nav-icon-item-favourite {
+        background-image: url('../../src/scss/svg/heart.svg'); 
+    }
+
+    .nav-icon-item-basket {
+        background-image: url('../../src/scss/svg/bag.svg');
+    }
+
+}

@@ -78,6 +78,10 @@
 @import "components/skip-navigation";
 @import "components/code";
 @import "components/tables";
+@import "components/navigation";
+@import "components/navigation-dropdown";
+@import "components/navigation-mobile";
+@import "components/carousel";
 // @import "components/scrollbars";
 // yo:start -- component
 // yo:end -- component
@@ -91,6 +95,11 @@
 @import "partials/browser-upgrade"; // Styles to show an upgrade message to users on old browsers
 // yo:start -- partial
 // yo:end -- partial
+
+/**
+* Plugins
+*/
+@import "plugins/hamburgers/hamburgers";
 
 
 /**
