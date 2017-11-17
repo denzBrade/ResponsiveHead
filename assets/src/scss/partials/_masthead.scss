@@ -1,0 +1,87 @@
+/**
+ * Masthead
+ * =================================
+ */
+.masthead {
+    background: $blue-light--secondary;
+    padding: $baseline *2 0 0 0;
+    transition: all 0.5s ease;
+
+    @include media('>mid') {
+        background: $blue-light--primary; 
+        padding: 15px 0 0 0;
+    }
+}
+
+.masthead-row {
+    position: relative;
+}
+
+.masthead-title {
+    background: $blue-light--primary;
+    text-align: center;
+
+    p {
+        font-size: small;
+        font-weight: 500;
+        letter-spacing: 2px;
+        padding: 10px 0 10px 0;
+        margin: 0;
+        text-transform: uppercase;
+        transition: all 0.5s ease;
+
+        @include media('>mid') {
+            padding: 0 0 15px 0;
+        }
+    }
+}
+
+// Locale Buttons & Locale Dropdwon
+.locale-buttons,
+.current-locale {
+    position: absolute;
+    top: -$baseline * 1.5;
+    transition: all 0.5s ease;
+
+    @include media('>mid') {
+        top: -5px;
+    }
+}
+
+.locale-buttons {
+    left: $baseline;
+    margin: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.current-locale {
+    right: $baseline * 2;
+    line-height: 27px;
+    height: 27px;
+    font-size: $font-size-mini;
+    font-weight: bold;
+
+    @include media('>mid') {
+        font-size: $font-size-normal;
+    }
+
+    a {
+        color: $dark;
+        position: relative;
+
+        &::after {
+            content:'';
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            background-image: url('../../src/scss/svg/down.svg');
+            background-repeat: no-repeat;
+            bottom: -4px;
+            margin-left: 10px;
+            
+        }
+    }
+}
