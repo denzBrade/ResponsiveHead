@@ -13,17 +13,21 @@
         top: 15px;
         width: 55px;
         margin: 0 auto 0 auto;
-        left: 0;
+        left: $baseline;;
         right: 0;
         transition: all 0.5s ease;
 
         @include media('>mid') {
             top: $baseline;
-            left: $baseline;
             width: 80px;
             margin: 0;
-
         }
+
+        @include media('>wide') {
+            left: $baseline * 2;
+        }
+
+        
     }
 
     .main-nav-container {
@@ -57,12 +61,13 @@
             @include media('>mid') {
                 padding: 0 10px;
                 text-transform: uppercase;
-                letter-spacing: 2px;
                 font-size: $font-size-large;
+                letter-spacing: 2px;
+                line-height:  21px;
             }
 
             @include media('>wide') {
-                padding: 0 $baseline;
+                padding: 0 40px;
             }
         }
     }
@@ -80,6 +85,10 @@
         top: $baseline * 2;
     }
 
+    @include media('>wide') {
+        right: $baseline * 2;
+    }
+
     .nav-icon-item {
         float: left;
         text-indent: -9999px;
@@ -87,6 +96,10 @@
         height: 24px;
         width: 24px;
         background-repeat: no-repeat;
+
+        @include media('>wide') {
+            margin: 0 7px;
+        }
     }
 
     .nav-icon-item-search,

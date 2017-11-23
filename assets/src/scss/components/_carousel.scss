@@ -15,7 +15,40 @@
 .flickity-prev-next-button {
     background: none;
 
+    &:hover {
+        background: none;
+    }
+
     .arrow {
         fill: $bright;
+    }
+}
+
+.flickity-page-dots {
+    bottom: 20px;
+
+    .dot {
+        background: $bright;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.cell-content {
+    text-align: center;
+    padding-top: 200px;
+
+    h1, p {
+        color: $bright;
+    }
+
+    h1 {
+        font-family: 'Playfair Display';
+        font-size: 60px;
+    }
+
+    button {
+        background-color: $blue;
+        border-radius: 0;
     }
 }

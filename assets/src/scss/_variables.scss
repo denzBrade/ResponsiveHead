@@ -47,14 +47,15 @@ $font-size-normal         : 14px;
 $font-size-large          : 16px;
 
 // Import Custom fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
 
 // Useful to set here when bold webfonts come as 400 font-weight.
 $font-weight-bold         : bold;
 
 // Font stacks
 $font-family-system       : 'Roboto Mono', 'monospace', "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-$font-family-sans         : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans         : Helvetica, "Helvetica Neue", Arial, sans-serif;
 $font-family-serif        : Georgia, "Times New Roman", Times, serif;
 $font-family-mono         : Menlo, Monaco, "Courier New", monospace;
 

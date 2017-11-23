@@ -4,12 +4,13 @@
  */
 .masthead {
     background: $blue-light--secondary;
-    padding: $baseline *2 0 0 0;
+    padding: 40px 0 0 0;
     transition: all 0.5s ease;
 
     @include media('>mid') {
         background: $blue-light--primary; 
         padding: 15px 0 0 0;
+        height: $baseline * 2;
     }
 }
 
@@ -22,8 +23,8 @@
     text-align: center;
 
     p {
-        font-size: small;
-        font-weight: 500;
+        font-size: $font-size-small;
+        line-height: 19px;
         letter-spacing: 2px;
         padding: 10px 0 10px 0;
         margin: 0;
@@ -32,6 +33,7 @@
 
         @include media('>mid') {
             padding: 0 0 15px 0;
+            font-size: $font-size-normal;
         }
     }
 }
@@ -40,17 +42,21 @@
 .locale-buttons,
 .current-locale {
     position: absolute;
-    top: -$baseline * 1.5;
+    top: -34px;
     transition: all 0.5s ease;
 
     @include media('>mid') {
-        top: -5px;
+        top: -2px;
     }
 }
 
 .locale-buttons {
     left: $baseline;
     margin: 0;
+
+    @include media('>wide') {
+        left: $baseline * 2;
+    }
 
     li {
         display: inline-block;
@@ -60,12 +66,17 @@
 .current-locale {
     right: $baseline * 2;
     line-height: 27px;
-    height: 27px;
+    font-family: $font-family-sans;
     font-size: $font-size-mini;
-    font-weight: bold;
+    font-weight: 700;
 
     @include media('>mid') {
         font-size: $font-size-normal;
+        font-weight: 500;
+    }
+
+    @include media('>wide') {
+        right: $baseline * 3;
     }
 
     a {
@@ -75,13 +86,17 @@
         &::after {
             content:'';
             position: absolute;
-            height: 24px;
-            width: 24px;
+            height: 16px;
+            width: 16px;
+            bottom: -3px;
             background-image: url('../../src/scss/svg/down.svg');
             background-repeat: no-repeat;
-            bottom: -4px;
-            margin-left: 10px;
-            
+            margin-left: 8px;
+
+            @include media('>mid') {
+                bottom: -1px;
+                margin-left: 10px;
+            }    
         }
     }
 }
