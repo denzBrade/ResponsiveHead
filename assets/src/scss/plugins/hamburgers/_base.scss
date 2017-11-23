@@ -71,7 +71,7 @@
 // Overwrite plugin styles 
 .hamburger {
   position: absolute;
-  left: $baseline;
+  left: 20px;
   padding: 5px;
 
   &:focus {
@@ -84,7 +84,11 @@
 }
 
 .hamburger-box {
-  width: 28px;
+  width: 21px;
+
+  @include media('>mid') {
+    width: 28px;
+  }
 }
 
 .hamburger-inner,
@@ -92,6 +96,23 @@
 .hamburger-inner::after {
   width: 100%;
   height: 3px;
+}
+
+.nav-primary .hamburger--slider {
+  
+  .hamburger-inner::before {
+    top: 8px;
+  }
+  
+  .hamburger-inner::after {
+    top: 16px;
+  }
+}
+
+.nav-primary .is-active {
+  .hamburger-inner::after {
+    top: 20px;
+  }
 }
 
 

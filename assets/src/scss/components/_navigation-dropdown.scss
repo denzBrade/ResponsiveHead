@@ -1,9 +1,10 @@
 .main-nav-dropdown {
     position: absolute;
     background-color: $bright;
-    box-shadow:  0px 0px 10px $gray;
+    box-shadow:  0px 0px 5px $gray;
     width: 90%;
-    height: 200px;
+    max-width: 1200px;
+    height: 230px;
     padding: $baseline;
     margin: 0 auto 0 auto;
     left: 0;
@@ -12,17 +13,35 @@
     transition: all 0.5s ease;
     display: none;
     z-index: 999;
-    // transform: translateY(-200%);
+
+    @include media('>wide') {
+        height: 290px;
+    }
 
     ul {
         list-style: none;
-        font-size: $font-size-small;
         margin: 0;
         transition: all 0.5s ease;
 
         @include media('>wide') {
-            font-size: $font-size-large;
+           
         }
+
+        li {
+            padding: 10px 0;
+            line-height: 21px;
+            font-size: $font-size-normal;
+            text-align: center;
+
+            @include media('>wide') {
+                font-size: $font-size-large;
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        max-height: 230px;
     }
 }
 
@@ -39,15 +58,15 @@
         &::after {
             position: absolute; 
             display: none;
-            content: '';
-            width: 0; 
-            height: 0; 
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-    
-            border-bottom: 7px solid $blue-light--primary;
-            bottom: -30px;
-            left: 50%;
+            content: '▲';
+            color: $bright;
+            width: 20px; 
+            height: 20px;
+            font-size: 20px;
+            text-shadow: 0 -7px 4px rgba(215,215,215, 0.2);
+            bottom: -36px;
+            left: 40%;
+            z-index: 9999;
         }
     }
 }

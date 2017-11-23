@@ -1,5 +1,9 @@
 .main-carousel {
-    height: 600px;
+    height: 485px;
+
+    @include media('>mid') {
+        height: 670px;
+    }
 }
 
 .carousel-cell {
@@ -12,8 +16,13 @@
     background-position: center;
 }
 
-.flickity-prev-next-button {
-    background: none;
+.flickity-prev-next-button { 
+    display: none;
+
+    @include media('>mid') {
+        background: none;
+        display: block;
+    }
 
     &:hover {
         background: none;
@@ -25,18 +34,29 @@
 }
 
 .flickity-page-dots {
-    bottom: 20px;
+    bottom: 45px;
 
     .dot {
         background: $bright;
         width: 12px;
         height: 12px;
+        vertical-align: middle;
+        margin: 0 7px;
+    }
+
+    .is-selected {
+        height: 16px;
+        width: 16px;
     }
 }
 
 .cell-content {
     text-align: center;
-    padding-top: 200px;
+    padding: 140px 50px 0 50px;
+
+    @include media('>mid') {
+        padding: 225px 0 0 0;
+    }
 
     h1, p {
         color: $bright;
@@ -44,11 +64,44 @@
 
     h1 {
         font-family: 'Playfair Display';
-        font-size: 60px;
+        font-size: 32px;
+        margin-bottom: 22px;
+
+        @include media('>mid') {
+            font-size: 60px;
+            line-height: 80px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 26px;
+
+        @include media('>mid') {
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
     }
 
     button {
         background-color: $blue;
         border-radius: 0;
+        font-family: $font-family-sans;
+        font-size: $font-size-large;
+        line-height: 1.5;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 15px 35px;
+        height: auto;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $bright;
+            color: $blue;
+        }
     }
 }
