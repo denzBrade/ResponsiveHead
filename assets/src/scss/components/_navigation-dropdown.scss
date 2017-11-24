@@ -1,3 +1,4 @@
+// Base styles for Nav Dropdown
 .main-nav-dropdown {
     position: absolute;
     background-color: $bright;
@@ -45,13 +46,14 @@
     }
 }
 
+// Show Menu On hover
 .has-dropdown {
-
     &:hover .main-nav-dropdown,
     &:hover .collections::after {
         display: block;
     }
     
+    // Custom pointer arrow for dropdown
     .collections {
         position: relative;
     

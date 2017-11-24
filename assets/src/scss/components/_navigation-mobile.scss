@@ -1,3 +1,4 @@
+// Base Styles for mobile menu
 .mobile-menu-container {
     background-color: $blue-light--secondary;
     position: fixed;
@@ -16,10 +17,12 @@
     }
 }
 
+// Animate along the X axis when opened or closed
 .is-open {
     transform: translateX(0);
 }
 
+// Animate borders on hover
 .mobile-menu {
     list-style: none;
     margin: 0;

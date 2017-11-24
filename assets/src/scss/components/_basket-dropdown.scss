@@ -1,3 +1,4 @@
+// Base Styles for Cart / Basket Dropdown
 .basket-dropdown {
     position: absolute;
     box-shadow:  0px 0px 5px $gray;
@@ -18,37 +19,12 @@
     }
 }
 
+// Display this class on click ( See ./basket-toggle.js )
 .show-basket {
     display: block;
 }
 
-.basket-dropdown-pointer {
-    position: relative;
-    display: block;
-
-    &::after {
-        position: absolute; 
-        content: '▲';
-        color: $bright;
-        width: 20px; 
-        height: 20px;
-        font-size: 20px;
-        text-shadow: 0 -7px 4px rgba(215,215,215, 0.2);
-        right: -6px;
-        top: -42px;
-        z-index: 998;
-
-        @include media('>mid') {
-            right: -8px;
-            top: -18px;
-        }
-
-        @include media('>wide') {
-            right: 20px;
-        }
-    }
-}
-
+// Basket / Cart inner Elements
 .basket-title {
     font-size: 22px;
     font-weight: 500;
@@ -63,7 +39,6 @@
 }
 
 .basket-item {
-
     overflow: hidden;
     border-bottom: 1px solid $gray;
     margin-bottom: 20px;
@@ -130,6 +105,34 @@
     .basket-item-price {
         font-size: 22px;
         line-height: 29px;
+    }
+}
+
+// Custom pointer arrow for dropdown
+.basket-dropdown-pointer {
+    position: relative;
+    display: block;
+
+    &::after {
+        position: absolute; 
+        content: '▲';
+        color: $bright;
+        width: 20px; 
+        height: 20px;
+        font-size: 20px;
+        text-shadow: 0 -7px 4px rgba(215,215,215, 0.2);
+        right: -6px;
+        top: -42px;
+        z-index: 998;
+
+        @include media('>mid') {
+            right: -8px;
+            top: -18px;
+        }
+
+        @include media('>wide') {
+            right: 20px;
+        }
     }
 }
     
