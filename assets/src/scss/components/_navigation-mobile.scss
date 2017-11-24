@@ -4,8 +4,8 @@
     right: 0;
     top: 158px;
     height: 100%;
-    width: 240px;
-    z-index: 100;
+    width: 100%;
+    z-index: 999;
     padding: $baseline;
     overflow-y: auto;
     transition: all 0.6s ease-in-out;

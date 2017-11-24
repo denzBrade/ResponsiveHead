@@ -6,14 +6,15 @@
     top: 65px;
     z-index: 999;
     padding: 25px;
-    display: block;
+    display: none;
     background-color: $bright;
 
     @include media('>mid') {
         top: 100px;
         width: 360px;
-        right: $baseline;
-        padding: 32px;
+        right: 5px;
+        padding: 0 32px;
+        height: 500px;
     }
 }
 
@@ -35,32 +36,37 @@
         text-shadow: 0 -7px 4px rgba(215,215,215, 0.2);
         right: -6px;
         top: -42px;
-        z-index: 9999;
+        z-index: 998;
 
         @include media('>mid') {
-            right: -28px;
-            top: -48px;
+            right: -8px;
+            top: -18px;
         }
 
         @include media('>wide') {
-            right: 0;
-
+            right: 20px;
         }
     }
 }
 
 .basket-title {
     font-size: 22px;
+    font-weight: 500;
     line-height: 29px;
-    padding-bottom: 23px;
+    padding: 0 0 15px;;
+    margin: 0 0 20px 0;
     border-bottom: 1px solid $gray;
+
+    @include media('>mid') {
+        padding: $baseline 0;
+    }
 }
 
 .basket-item {
 
     overflow: hidden;
     border-bottom: 1px solid $gray;
-    margin-bottom: $baseline;
+    margin-bottom: 20px;
 
     .basket-item-product {
         width: 100px;

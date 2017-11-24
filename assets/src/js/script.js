@@ -16,7 +16,7 @@ import 'kickoff-welcome.js'; // The Kickoff message in the js console. Remove it
 
 // Our code
 import menuToggle from './modules/menu-toggle';
-// import carousel from '/modules/carousel';
+import basketToggle from './modules/basket-toggle';
 
 // DOM ready code goes in here
 ready(() => {
@@ -24,6 +24,7 @@ ready(() => {
 		polyfill: true, // polyfill <use> elements for External Content
 	});
 
+  // Initalisze Flickity Carousel when page is ready
 	const elem = document.querySelector('.main-carousel');
     
     let flkty = new Flickity( elem, {
