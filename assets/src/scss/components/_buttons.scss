@@ -162,3 +162,26 @@ input[type="button"] {
 		background-color: $blue-light--primary;
 	}
 }
+
+.btn--main {
+	background-color: $blue;
+	border-radius: 0;
+	font-family: $font-family-sans;
+	font-size: $font-size-large;
+	line-height: 1.5;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 15px 35px;
+	height: auto;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background-color: $bright;
+		color: $blue;
+		border: 1px solid $blue;
+	}
+}
+
+.btn--checkout {
+	width: 100%;
+}

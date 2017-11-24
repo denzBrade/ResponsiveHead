@@ -1,0 +1,129 @@
+.basket-dropdown {
+    position: absolute;
+    box-shadow:  0px 0px 5px $gray;
+    width: 300px;
+    right: 10px;
+    top: 65px;
+    z-index: 999;
+    padding: 25px;
+    display: block;
+    background-color: $bright;
+
+    @include media('>mid') {
+        top: 100px;
+        width: 360px;
+        right: $baseline;
+        padding: 32px;
+    }
+}
+
+.show-basket {
+    display: block;
+}
+
+.basket-dropdown-pointer {
+    position: relative;
+    display: block;
+
+    &::after {
+        position: absolute; 
+        content: '▲';
+        color: $bright;
+        width: 20px; 
+        height: 20px;
+        font-size: 20px;
+        text-shadow: 0 -7px 4px rgba(215,215,215, 0.2);
+        right: -6px;
+        top: -42px;
+        z-index: 9999;
+
+        @include media('>mid') {
+            right: -28px;
+            top: -48px;
+        }
+
+        @include media('>wide') {
+            right: 0;
+
+        }
+    }
+}
+
+.basket-title {
+    font-size: 22px;
+    line-height: 29px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid $gray;
+}
+
+.basket-item {
+
+    overflow: hidden;
+    border-bottom: 1px solid $gray;
+    margin-bottom: $baseline;
+
+    .basket-item-product {
+        width: 100px;
+        height: 90px;
+        float: left;
+        margin-right: $baseline;
+
+        @include media('>mid') {
+            width: 120px;
+            height: 110px;
+        }
+    }
+
+    .basket-item-description {
+        float: left;
+        
+    }
+
+    .cancel-item {
+        position: relative;
+        width: 100%;
+        display: block;
+
+        img {
+            position: absolute;
+            width: 16px;
+            right: -0px;
+            top: 28px;
+
+            @include media('>mid') {
+                width: 16px;
+                right: -25px;
+                top: 5px;
+            }    
+        }
+    }
+
+    .basket-item-title {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .basket-item-variant {
+        font-size: 13px;
+        color: $gray-alternate;
+        margin-bottom: 5px;
+    }
+
+    .basket-item-quantity {
+        margin-bottom: 10px;
+    }
+
+    span {
+        padding: 0 10px;
+    }
+
+    span:first-child {
+        padding-left: 0;
+    }
+
+    .basket-item-price {
+        font-size: 22px;
+        line-height: 29px;
+    }
+}
+    
